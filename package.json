@@ -1,0 +1,29 @@
+{
+  "name": "stock_market_data_pipeline",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drishti-gupta0704/stock-market-data-pipeline-analytics-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/drishti-gupta0704/stock-market-data-pipeline-analytics-api/issues"
+  },
+  "homepage": "https://github.com/drishti-gupta0704/stock-market-data-pipeline-analytics-api#readme",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "pg": "^8.22.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
