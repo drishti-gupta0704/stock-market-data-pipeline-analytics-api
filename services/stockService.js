@@ -1,6 +1,7 @@
 
 const axios = require("axios");
 const { transformStockData } = require("../utils/stockTransformer");
+const { saveStockData } = require("./stockDBService");
 
 const API_KEY = process.env.ALPHA_VANTAGE_API_KEY;
 
@@ -18,7 +19,10 @@ const getStockData = async (symbol) => {
 
     const transformedData =  transformStockData(rawData);
     
-    return transformedData;
+    // return transformedData;
+    
+    const savedStock = await saveStockData(transformedData);
+    return savedStock;
   
 
   } catch (error) {

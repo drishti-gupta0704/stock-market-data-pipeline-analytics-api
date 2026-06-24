@@ -17,6 +17,7 @@ const transformStockData = (data) => {
     priceChange: parseFloat(data["09. change"]),
 
     percentChange: data["10. change percent"],
+    
 
     timestamp: new Date()
   };
