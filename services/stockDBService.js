@@ -13,6 +13,10 @@ const saveStockData = async (stockData) => {
       timestamp
     )
     VALUES ($1,$2,$3,$4,$5)
+
+    ON CONFLICT(symbol, timestamp)
+    DO NOTHING
+    
     RETURNING *;
   `;
 
@@ -23,6 +27,8 @@ const saveStockData = async (stockData) => {
     stockData.percentChange,
     stockData.timestamp
   ];
+    
+    
 
   const result =
     await pool.query(query, values);
