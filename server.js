@@ -7,10 +7,11 @@ require("./config/db");
 require("./workers/stockWorker");
 
 const stockRoutes = require("./routes/stockRoutes");
+const analyticsRoutes = require("./routes/analyticsRoutes");
 const { startStockCron } = require("./cron/stockCron");
 
 app.use(express.json());
-
+app.use("/analytics", analyticsRoutes);
 app.use("/stocks", stockRoutes);
 
 app.get("/", (req, res) => {
