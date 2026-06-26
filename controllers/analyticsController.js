@@ -51,7 +51,6 @@ const topLosers = async (req, res) => {
 const highestPrice = async (req, res) => {
 
   try {
-
     const data = await getHighestPrice();
     res.json({
       success: true,
