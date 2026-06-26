@@ -1,6 +1,7 @@
 
 const cron = require("node-cron");
-const { getStockData } = require("../services/stockService");
+
+const stockQueue = require("../queues/stockQueue");
 
 const STOCK_SYMBOLS = [
   "AAPL",
@@ -11,23 +12,23 @@ const STOCK_SYMBOLS = [
 ];
 
 const startStockCron = () => {
-  
-  console.log("Cron Scheduler Started...");
+
+  console.log("Cron Scheduler Started");
 
   cron.schedule("*/5 * * * *", async () => {
 
-    console.log("Running Stock Cron Job...");
+    console.log("Adding Jobs To Queue...");
 
     for (const symbol of STOCK_SYMBOLS) {
 
-      try {
-        const stock = await getStockData(symbol);
-        console.log(`${symbol} stored successfully`);
+      await stockQueue.add(
+        "fetchStock",
+        {
+          symbol
+        }
+      );
 
-      } catch (err) {
-        console.error(`${symbol}: ${err.message}`);
-
-      }
+      console.log(`${symbol} Job Added`);
 
     }
 
