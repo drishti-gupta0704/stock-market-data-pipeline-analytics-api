@@ -10,7 +10,6 @@ const getCachedStock = async (symbol) => {
   if (!cachedData) {
     return null;
   }
-
   return JSON.parse(cachedData);
 
 };

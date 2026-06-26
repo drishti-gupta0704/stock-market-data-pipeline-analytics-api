@@ -36,6 +36,25 @@ const saveStockData = async (stockData) => {
   return result.rows[0];
 };
 
+
+
+const getLatestStock = async (symbol) => {
+
+  const query = `
+    SELECT *
+    FROM stocks
+    WHERE symbol = $1
+    ORDER BY timestamp DESC
+    LIMIT 1;
+  `;
+
+  const result = await pool.query(query, [symbol]);
+
+  return result.rows[0];
+
+};
+
 module.exports = {
-  saveStockData
+  saveStockData,
+  getLatestStock
 };
