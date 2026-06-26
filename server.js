@@ -4,10 +4,11 @@ const express = require("express");
 const app = express();
 require("./config/db");
 
-app.use(express.json());
 
 const stockRoutes = require("./routes/stockRoutes");
 const { startStockCron } = require("./cron/stockCron");
+
+app.use(express.json());
 
 app.use("/stocks", stockRoutes);
 

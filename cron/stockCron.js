@@ -11,6 +11,8 @@ const STOCK_SYMBOLS = [
 ];
 
 const startStockCron = () => {
+  
+  console.log("Cron Scheduler Started...");
 
   cron.schedule("*/5 * * * *", async () => {
 
