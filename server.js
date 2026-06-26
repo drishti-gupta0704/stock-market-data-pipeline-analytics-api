@@ -4,6 +4,7 @@ const express = require("express");
 const app = express();
 require("./config/db");
 
+require("./workers/stockWorker");
 
 const stockRoutes = require("./routes/stockRoutes");
 const { startStockCron } = require("./cron/stockCron");
