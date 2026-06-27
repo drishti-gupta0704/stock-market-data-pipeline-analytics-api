@@ -54,7 +54,50 @@ const getLatestStock = async (symbol) => {
 
 };
 
+
+
+const getStockHistory = async (
+  symbol,
+  startDate,
+  endDate
+) => {
+
+  let query = `
+    SELECT *
+    FROM stocks
+    WHERE symbol = $1
+  `;
+
+  const values = [symbol];
+
+  if (startDate && endDate) {
+
+    query += `
+      AND timestamp
+      BETWEEN $2 AND $3
+    `;
+
+    values.push(startDate);
+    values.push(endDate);
+
+  }
+
+  query += `
+    ORDER BY timestamp DESC
+    LIMIT 30;
+  `;
+
+  const result =
+    await pool.query(query, values);
+
+  return result.rows;
+
+};
+
 module.exports = {
   saveStockData,
-  getLatestStock
+  getLatestStock,
+  getStockHistory
 };
+
+
