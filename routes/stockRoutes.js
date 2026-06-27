@@ -2,7 +2,9 @@
 const express = require("express");
 const router = express.Router();
 
-const { fetchStock } = require("../controllers/stockController");
+const { fetchStock , fetchStockHistory} = require("../controllers/stockController");
+
+router.get("/history/:symbol", fetchStockHistory );
 
 router.get("/:symbol", fetchStock);
 
