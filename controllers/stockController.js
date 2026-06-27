@@ -1,5 +1,5 @@
 
-const { getLatestStock } = require("../services/stockDBService");
+const { getLatestStock , getStockHistory } = require("../services/stockDBService");
 
 const {
   getCachedStock,
@@ -64,6 +64,50 @@ const fetchStock = async (req, res) => {
 
 };
 
+
+
+
+
+const fetchStockHistory = async (req, res) => {
+
+  try {
+    const symbol =
+      req.params.symbol
+      .trim()
+      .toUpperCase();
+
+    const {
+      startDate,
+      endDate
+    } = req.query;
+
+    const history =
+      await getStockHistory(
+        symbol,
+        startDate,
+        endDate
+      );
+
+    res.json({
+      success: true,
+      count: history.length,
+      data: history
+    });
+
+  }
+
+  catch (err) {
+    res.status(500).json({
+      success: false,
+      message: err.message
+    });
+
+  }
+
+};
+
+
 module.exports = {
-  fetchStock
+  fetchStock,
+  fetchStockHistory
 };
