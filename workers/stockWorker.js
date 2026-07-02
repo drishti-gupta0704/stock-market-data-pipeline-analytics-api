@@ -25,7 +25,7 @@ stockWorker.on("active", (job) => {
 
 
 stockWorker.on("completed", (job) => {
-  console.log(`Job ${job.id} Completed Successfully`);
+  loggers.info(`Job ${job.id} Completed Successfully`);
   console.log(`Stock: ${job.data.symbol}`);
 
 
@@ -33,7 +33,7 @@ stockWorker.on("completed", (job) => {
 
 
 stockWorker.on("failed", (job, err) => {
-  console.error(`Job ${job?.id} Failed`);
+  logger.error(`Job ${job?.id} Failed: ${err.message}`);
   console.error(`Stock: ${job?.data?.symbol}`);
   console.error(`Reason: ${err.message}`);
 

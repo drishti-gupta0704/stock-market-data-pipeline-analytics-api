@@ -13,14 +13,13 @@ const STOCK_SYMBOLS = [
 
 const startStockCron = () => {
 
-  console.log("Cron Scheduler Started");
+  logger.info("Cron Scheduler Started");
 
   cron.schedule("*/5 * * * *", async () => {
 
     console.log("Adding Jobs To Queue...");
 
     for (const symbol of STOCK_SYMBOLS) {
-
       await stockQueue.add(
         "fetchStock",
         {

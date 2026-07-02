@@ -26,7 +26,7 @@ const getStockData = async (symbol) => {
   
 
   } catch (error) {
-    console.error("Stock API Error:", error.message);
+    logger.error("Stock API Error:", error.message);
     throw error;
   }
 };
