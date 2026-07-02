@@ -2,6 +2,7 @@
 const { Worker } = require("bullmq");
 const connection = require("../config/redis");
 const { getStockData } = require("../services/stockService");
+const logger = require("../utils/logger");
 
 const stockWorker = new Worker(
   "stockQueue",

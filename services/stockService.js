@@ -2,6 +2,7 @@
 const axios = require("axios");
 const { transformStockData } = require("../utils/stockTransformer");
 const { saveStockData } = require("./stockDBService");
+const logger = require("../utils/logger");
 
 const API_KEY = process.env.ALPHA_VANTAGE_API_KEY;
 
@@ -26,7 +27,8 @@ const getStockData = async (symbol) => {
   
 
   } catch (error) {
-    logger.error("Stock API Error:", error.message);
+    // logger.error("Stock API Error:", error.message);
+    logger.error(`Stock API Error: ${error.message}`);
     throw error;
   }
 };

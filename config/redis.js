@@ -1,5 +1,6 @@
 
 const IORedis = require("ioredis");
+const logger = require("../utils/logger");
 
 const connection = new IORedis({
   host: "127.0.0.1",
@@ -9,11 +10,11 @@ const connection = new IORedis({
 });
 
 connection.on("connect", () => {
-  console.log("Redis Connected");
+  logger.info("Redis Connected");
 });
 
 connection.on("error", (err) => {
-  console.error("Redis Error:", err.message);
+  logger.error(`Redis Error: ${err.message}`);
 });
 
 module.exports = connection;

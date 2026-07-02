@@ -3,6 +3,7 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 require("./config/db");
+const logger = require("./utils/logger");
 
 require("./workers/stockWorker");
 
@@ -26,6 +27,6 @@ startStockCron();
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
-  loggers.info(`Server running on port ${PORT}`);
+  logger.info(`Server running on port ${PORT}`);
 });
 

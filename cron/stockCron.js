@@ -1,5 +1,6 @@
 
 const cron = require("node-cron");
+const logger = require("../utils/logger");
 
 const stockQueue = require("../queues/stockQueue");
 
