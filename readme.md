@@ -27,7 +27,7 @@ A real-time backend system that fetches, processes, and analyzes stock market da
 ### Base URL
 https://stock-market-data-pipeline-analytics-api.onrender.com
 
-
+---
 
 ### Stock APIs
 
