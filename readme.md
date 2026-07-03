@@ -33,58 +33,32 @@ https://stock-market-data-pipeline-analytics-api.onrender.com
 
   Get Latest Stock Data
 - **GET** `/stocks/:symbol`
-
-Example:
-
-https://stock-market-data-pipeline-analytics-api.onrender.com/stocks/AAPL
-
-
+Example: https://stock-market-data-pipeline-analytics-api.onrender.com/stocks/AAPL
  Get Stock History
 - **GET** `/stocks/history/:symbol`
-
-Example:
-
-https://stock-market-data-pipeline-analytics-api.onrender.com/stocks/history/AAPL
-
-
+Example: https://stock-market-data-pipeline-analytics-api.onrender.com/stocks/history/AAPL
   Get Stock History (Date Range)
 - **GET** `/stocks/history/:symbol?startDate=YYYY-MM-DD&endDate=YYYY-MM-DD`
-
-Example:
-
-https://stock-market-data-pipeline-analytics-api.onrender.com/stocks/history/AAPL?startDate=2026-06-26&endDate=2026-06-27
+Example: https://stock-market-data-pipeline-analytics-api.onrender.com/stocks/history/AAPL?startDate=2026-06-26&endDate=2026-06-27
 
 
 ---
 
 ###  Analytics APIs
 
-  Top Gainers
+Top Gainers
 - **GET** `/analytics/top-gainers`
+Example: https://stock-market-data-pipeline-analytics-api.onrender.com/analytics/top-gainers
 
-Example:
-
-https://stock-market-data-pipeline-analytics-api.onrender.com/analytics/top-gainers
-
-
-
-  Top Losers
+Top Losers
 - **GET** `/analytics/top-losers`
+Example: https://stock-market-data-pipeline-analytics-api.onrender.com/analytics/top-losers
 
-Example:
-
-https://stock-market-data-pipeline-analytics-api.onrender.com/analytics/top-losers
-
-
- Highest Price
+Highest Price
 - **GET** `/analytics/highest-price`
-
-
-  Lowest Price
+Lowest Price
 - **GET** `/analytics/lowest-price`
-
-
-  Average Price
+Average Price
 - **GET** `/analytics/average-price`
 
 ---
@@ -93,15 +67,7 @@ https://stock-market-data-pipeline-analytics-api.onrender.com/analytics/top-lose
 
   Export All Stocks (CSV)
 - **GET** `/export/csv`
-
-Example:
-
-https://stock-market-data-pipeline-analytics-api.onrender.com/export/csv
-
-
+Example: https://stock-market-data-pipeline-analytics-api.onrender.com/export/csv
   Export Specific Stock (CSV)
 - **GET** `/export/csv/:symbol`
-
-Example:
-
-https://stock-market-data-pipeline-analytics-api.onrender.com/export/csv/AAPL
+Example: https://stock-market-data-pipeline-analytics-api.onrender.com/export/csv/AAPL
