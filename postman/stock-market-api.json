@@ -1,0 +1,251 @@
+
+{
+  "info": {
+    "_postman_id": "93d29f4a-095e-4e69-9734-be7575fc6ddf",
+    "name": "Stock Market Data Pipeline & Analytics API",
+    "description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "51552261",
+    "_collection_link": "https://go.postman.co/collection/51552261-93d29f4a-095e-4e69-9734-be7575fc6ddf?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Stocks",
+      "item": [
+        {
+          "name": "Get Latest Stock",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://stock-market-data-pipeline-analytics-api.onrender.com/stocks/AAPL",
+              "protocol": "https",
+              "host": [
+                "stock-market-data-pipeline-analytics-api",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "stocks",
+                "AAPL"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Stock History",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://stock-market-data-pipeline-analytics-api.onrender.com/stocks/history/AAPL",
+              "protocol": "https",
+              "host": [
+                "stock-market-data-pipeline-analytics-api",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "stocks",
+                "history",
+                "AAPL"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Stock History Between Dates",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://stock-market-data-pipeline-analytics-api.onrender.com/stocks/history/AAPL?startDate=2026-06-26&endDate=2026-06-27",
+              "protocol": "https",
+              "host": [
+                "stock-market-data-pipeline-analytics-api",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "stocks",
+                "history",
+                "AAPL"
+              ],
+              "query": [
+                {
+                  "key": "startDate",
+                  "value": "2026-06-26"
+                },
+                {
+                  "key": "endDate",
+                  "value": "2026-06-27"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Analytics",
+      "item": [
+        {
+          "name": "Top Gainers",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://stock-market-data-pipeline-analytics-api.onrender.com/analytics/top-gainers",
+              "protocol": "https",
+              "host": [
+                "stock-market-data-pipeline-analytics-api",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "analytics",
+                "top-gainers"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Top Losers",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://stock-market-data-pipeline-analytics-api.onrender.com/analytics/top-losers",
+              "protocol": "https",
+              "host": [
+                "stock-market-data-pipeline-analytics-api",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "analytics",
+                "top-losers"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Highest Price",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://stock-market-data-pipeline-analytics-api.onrender.com/analytics/highest-price",
+              "protocol": "https",
+              "host": [
+                "stock-market-data-pipeline-analytics-api",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "analytics",
+                "highest-price"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Lowest Price",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://stock-market-data-pipeline-analytics-api.onrender.com/analytics/lowest-price",
+              "protocol": "https",
+              "host": [
+                "stock-market-data-pipeline-analytics-api",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "analytics",
+                "lowest-price"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Average Price",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://stock-market-data-pipeline-analytics-api.onrender.com/analytics/average-price",
+              "protocol": "https",
+              "host": [
+                "stock-market-data-pipeline-analytics-api",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "analytics",
+                "average-price"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Export",
+      "item": [
+        {
+          "name": "Export All Stocks",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://stock-market-data-pipeline-analytics-api.onrender.com/export/csv",
+              "protocol": "https",
+              "host": [
+                "stock-market-data-pipeline-analytics-api",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "export",
+                "csv"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Export AAPL",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://stock-market-data-pipeline-analytics-api.onrender.com/export/csv/AAPL",
+              "protocol": "https",
+              "host": [
+                "stock-market-data-pipeline-analytics-api",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "export",
+                "csv",
+                "AAPL"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
