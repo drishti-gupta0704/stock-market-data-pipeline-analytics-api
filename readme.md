@@ -31,7 +31,7 @@ https://stock-market-data-pipeline-analytics-api.onrender.com
 
 ### Stock APIs
 
-  Get Latest Stock Data
+ Get Latest Stock Data
 - **GET** `/stocks/:symbol`
 Example: https://stock-market-data-pipeline-analytics-api.onrender.com/stocks/AAPL
  
@@ -39,7 +39,7 @@ Example: https://stock-market-data-pipeline-analytics-api.onrender.com/stocks/AA
 - **GET** `/stocks/history/:symbol`
 Example: https://stock-market-data-pipeline-analytics-api.onrender.com/stocks/history/AAPL
   
-  Get Stock History (Date Range)
+ Get Stock History (Date Range)
 - **GET** `/stocks/history/:symbol?startDate=YYYY-MM-DD&endDate=YYYY-MM-DD`
 Example: https://stock-market-data-pipeline-analytics-api.onrender.com/stocks/history/AAPL?startDate=2026-06-26&endDate=2026-06-27
 
@@ -69,10 +69,10 @@ Average Price
 
 ### Export APIs
 
-  Export All Stocks (CSV)
+Export All Stocks (CSV)
 - **GET** `/export/csv`
 Example: https://stock-market-data-pipeline-analytics-api.onrender.com/export/csv
   
-  Export Specific Stock (CSV)
+Export Specific Stock (CSV)
 - **GET** `/export/csv/:symbol`
 Example: https://stock-market-data-pipeline-analytics-api.onrender.com/export/csv/AAPL
