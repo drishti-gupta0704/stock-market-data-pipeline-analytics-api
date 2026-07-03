@@ -38,6 +38,7 @@ Example: https://stock-market-data-pipeline-analytics-api.onrender.com/stocks/AA
  Get Stock History
 - **GET** `/stocks/history/:symbol`
 Example: https://stock-market-data-pipeline-analytics-api.onrender.com/stocks/history/AAPL
+
   
  Get Stock History (Date Range)
 - **GET** `/stocks/history/:symbol?startDate=YYYY-MM-DD&endDate=YYYY-MM-DD`
@@ -72,6 +73,7 @@ Average Price
 Export All Stocks (CSV)
 - **GET** `/export/csv`
 Example: https://stock-market-data-pipeline-analytics-api.onrender.com/export/csv
+
   
 Export Specific Stock (CSV)
 - **GET** `/export/csv/:symbol`
