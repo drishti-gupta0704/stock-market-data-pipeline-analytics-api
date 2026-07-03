@@ -20,8 +20,9 @@ A real-time backend system that fetches, processes, and analyzes stock market da
 - Clean logging for monitoring using winston
 
 ---
+--- 
 
-# endpoints and url 
+# Endpoints and Url 
 
 ### Base URL
 https://stock-market-data-pipeline-analytics-api.onrender.com
@@ -38,8 +39,6 @@ Example:
 https://stock-market-data-pipeline-analytics-api.onrender.com/stocks/AAPL
 
 
----
-
  Get Stock History
 - **GET** `/stocks/history/:symbol`
 
@@ -47,8 +46,6 @@ Example:
 
 https://stock-market-data-pipeline-analytics-api.onrender.com/stocks/history/AAPL
 
-
----
 
   Get Stock History (Date Range)
 - **GET** `/stocks/history/:symbol?startDate=YYYY-MM-DD&endDate=YYYY-MM-DD`
@@ -70,7 +67,6 @@ Example:
 https://stock-market-data-pipeline-analytics-api.onrender.com/analytics/top-gainers
 
 
----
 
   Top Losers
 - **GET** `/analytics/top-losers`
@@ -80,24 +76,20 @@ Example:
 https://stock-market-data-pipeline-analytics-api.onrender.com/analytics/top-losers
 
 
----
-
  Highest Price
 - **GET** `/analytics/highest-price`
 
----
 
   Lowest Price
 - **GET** `/analytics/lowest-price`
 
----
 
   Average Price
 - **GET** `/analytics/average-price`
 
 ---
 
-  Export APIs
+### Export APIs
 
   Export All Stocks (CSV)
 - **GET** `/export/csv`
@@ -107,7 +99,6 @@ Example:
 https://stock-market-data-pipeline-analytics-api.onrender.com/export/csv
 
 
----
   Export Specific Stock (CSV)
 - **GET** `/export/csv/:symbol`
 
