@@ -7,12 +7,14 @@ const logger = require("./utils/logger");
 
 require("./workers/stockWorker");
 
+
 const stockRoutes = require("./routes/stockRoutes");
 const analyticsRoutes = require("./routes/analyticsRoutes");
 const { startStockCron } = require("./cron/stockCron");
 const exportRoutes = require("./routes/exportRoutes");
 
 app.use(express.json());
+
 app.use("/export", exportRoutes);
 app.use("/analytics", analyticsRoutes);
 app.use("/stocks", stockRoutes);

@@ -27,7 +27,9 @@
     "json2csv": "^6.0.0-alpha.2",
     "node-cron": "^4.5.0",
     "pg": "^8.22.0",
-    "winston": "^3.19.0"
+    "swagger-ui-express": "^5.0.1",
+    "winston": "^3.19.0",
+    "yamljs": "^0.3.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.14"
