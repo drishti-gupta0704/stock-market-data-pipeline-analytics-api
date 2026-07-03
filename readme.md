@@ -1,7 +1,7 @@
 # Stock Market Data Pipeline & Analytics API
 
 A real-time backend system that fetches, processes, and analyzes stock market data using a scalable ETL pipeline architecture with queues, caching, and analytics
-
+---
 ##  Features
 - Real-time stock data ingestion using external APIs (Alpha Vantage)
 - ETL pipeline (Extract → Transform → Load)
@@ -20,14 +20,14 @@ A real-time backend system that fetches, processes, and analyzes stock market da
 - Clean logging for monitoring using winston
 
 ---
---- 
+
 
 # Endpoints and Url 
-
+--- 
 ### Base URL
 https://stock-market-data-pipeline-analytics-api.onrender.com
 
----
+
 
 ### Stock APIs
 
