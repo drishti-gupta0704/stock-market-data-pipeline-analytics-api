@@ -8,13 +8,14 @@ A real-time backend system that fetches, processes, and analyzes stock market da
 - Background job processing using BullMQ + Redis
 - Automated cron-based data fetching
 - Analytics APIs:
-   Top gainers
-   Top losers
-   Moving averages
-   Trend analysis
+   - Top gainers
+   - Top losers
+   - Moving averages
+   - Trend analysis
 - Data caching using Redis for fast responses
 - Persistent storage using Postgres
 - Retry mechanism for failed API calls
 - CSV export support for stock data
 - RESTful API architecture
-- Clean logging for monitoring
+- Clean logging for monitoring using winston
+
