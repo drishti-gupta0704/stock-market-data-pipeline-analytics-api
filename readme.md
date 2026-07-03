@@ -24,7 +24,7 @@ A real-time backend system that fetches, processes, and analyzes stock market da
 
 - Stock APIs :
  - Get Latest Stock Data
-  -GET /stocks/:symbol
+  - GET /stocks/:symbol
     - Example: https://stock-market-data-pipeline-analytics-api.onrender.com/stocks/AAPL
  - Get Stock History
   -GET /stocks/history/:symbol
