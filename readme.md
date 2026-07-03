@@ -19,16 +19,18 @@ A real-time backend system that fetches, processes, and analyzes stock market da
 - RESTful API architecture
 - Clean logging for monitoring using winston
 
-## endpoints and url 
+---
 
-##  Base URL
+# endpoints and url 
+
+### Base URL
 https://stock-market-data-pipeline-analytics-api.onrender.com
 
 ---
 
-## Stock APIs
+### Stock APIs
 
-###  Get Latest Stock Data
+####  Get Latest Stock Data
 - **GET** `/stocks/:symbol`
 
 Example:
@@ -38,7 +40,7 @@ https://stock-market-data-pipeline-analytics-api.onrender.com/stocks/AAPL
 
 ---
 
-###  Get Stock History
+#### Get Stock History
 - **GET** `/stocks/history/:symbol`
 
 Example:
@@ -48,7 +50,7 @@ https://stock-market-data-pipeline-analytics-api.onrender.com/stocks/history/AAP
 
 ---
 
-###  Get Stock History (Date Range)
+####  Get Stock History (Date Range)
 - **GET** `/stocks/history/:symbol?startDate=YYYY-MM-DD&endDate=YYYY-MM-DD`
 
 Example:
@@ -58,9 +60,9 @@ https://stock-market-data-pipeline-analytics-api.onrender.com/stocks/history/AAP
 
 ---
 
-##  Analytics APIs
+###  Analytics APIs
 
-###  Top Gainers
+####  Top Gainers
 - **GET** `/analytics/top-gainers`
 
 Example:
@@ -70,7 +72,7 @@ https://stock-market-data-pipeline-analytics-api.onrender.com/analytics/top-gain
 
 ---
 
-###  Top Losers
+####  Top Losers
 - **GET** `/analytics/top-losers`
 
 Example:
@@ -80,24 +82,24 @@ https://stock-market-data-pipeline-analytics-api.onrender.com/analytics/top-lose
 
 ---
 
-###  Highest Price
+####  Highest Price
 - **GET** `/analytics/highest-price`
 
 ---
 
-###  Lowest Price
+####  Lowest Price
 - **GET** `/analytics/lowest-price`
 
 ---
 
-###  Average Price
+####  Average Price
 - **GET** `/analytics/average-price`
 
 ---
 
-##  Export APIs
+###  Export APIs
 
-###  Export All Stocks (CSV)
+####  Export All Stocks (CSV)
 - **GET** `/export/csv`
 
 Example:
@@ -107,7 +109,7 @@ https://stock-market-data-pipeline-analytics-api.onrender.com/export/csv
 
 ---
 
-###  Export Specific Stock (CSV)
+####  Export Specific Stock (CSV)
 - **GET** `/export/csv/:symbol`
 
 Example:
