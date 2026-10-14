@@ -2,6 +2,10 @@
 
 A real-time backend system that fetches, processes, and analyzes stock market data using a scalable ETL pipeline architecture with queues, caching, and analytics
 ---
+
+**Click to View Live Project:** (https://stockmarketpipelinefrontend.vercel.app/)
+
+
 ##  Features
 - Real-time stock data ingestion using external APIs (Alpha Vantage)
 - ETL pipeline (Extract → Transform → Load)
