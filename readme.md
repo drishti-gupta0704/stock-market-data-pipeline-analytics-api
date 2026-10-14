@@ -3,7 +3,7 @@
 A real-time backend system that fetches, processes, and analyzes stock market data using a scalable ETL pipeline architecture with queues, caching, and analytics
 ---
 
-**Click to View Live Project:** (https://stockmarketpipelinefrontend.vercel.app/)
+**Click to View Live Project:** [click to view demo] (https://stockmarketpipelinefrontend.vercel.app/)
 
 
 ##  Features
