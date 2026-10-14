@@ -1,7 +1,11 @@
 
 require("dotenv").config();
 const express = require("express");
+const cors = require("cors");
 const app = express();
+app.use(cors({
+  origin: "https://stockmarketpipelinefrontend.vercel.app"
+}));
 require("./config/db");
 const logger = require("./utils/logger");
 

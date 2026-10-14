@@ -19,15 +19,11 @@ const getStockData = async (symbol) => {
     }
 
     const transformedData =  transformStockData(rawData);
-    
-    // return transformedData;
-    
     const savedStock = await saveStockData(transformedData);
     return savedStock;
   
 
   } catch (error) {
-    // logger.error("Stock API Error:", error.message);
     logger.error(`Stock API Error: ${error.message}`);
     throw error;
   }

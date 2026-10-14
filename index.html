@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StockPulse | Market Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand"><span class="brand-icon">↗</span><div>Stock<span>Pulse</span><small>MARKET INTELLIGENCE</small></div></div>
+    <div class="nav-label">WORKSPACE</div>
+    <a class="nav active" href="#overview">▦ <span>Overview</span></a>
+    <a class="nav" href="#history">⌁ <span>Stock history</span></a>
+    <a class="nav" href="#movers">⇅ <span>Market movers</span></a>
+    <div class="sidebar-bottom"><div class="live-dot"></div><div><b>Pipeline status</b><small>Connected to stock API</small></div></div>
+  </aside>
+  <main class="main" id="overview">
+    <header class="topbar"><div><div class="eyebrow">MARKET OVERVIEW</div><h1>Stock market dashboard</h1><p>Explore the latest ingested market data and analytics.</p></div><div class="top-actions"><span class="status"><i></i><span id="connectionText">Checking API…</span></span><button id="refreshBtn" class="button secondary">↻ Refresh data</button></div></header>
+    <section class="search-panel"><div><label for="symbolInput">LOOK UP A STOCK</label><p>Search by ticker symbol to view its latest price and history.</p></div><form id="searchForm"><input id="symbolInput" value="AAPL" maxlength="10" placeholder="e.g. AAPL" aria-label="Stock symbol"/><button class="button primary" type="submit">View stock <span>→</span></button></form></section>
+    <div id="message" class="message" role="status">Loading market data…</div>
+    <section class="metrics" aria-label="Stock summary">
+      <article class="metric"><div class="metric-top"><span>Selected stock</span><span class="metric-icon">◉</span></div><div class="metric-value" id="selectedSymbol">AAPL</div><div class="metric-foot">Ticker symbol</div></article>
+      <article class="metric"><div class="metric-top"><span>Latest price</span><span class="metric-icon">$</span></div><div class="metric-value" id="latestPrice">—</div><div class="metric-foot" id="priceTimestamp">Latest stored observation</div></article>
+      <article class="metric"><div class="metric-top"><span>Price change</span><span class="metric-icon">↗</span></div><div class="metric-value" id="priceChange">—</div><div class="metric-foot">Change vs previous observation</div></article>
+      <article class="metric"><div class="metric-top"><span>Change percent</span><span class="metric-icon">％</span></div><div class="metric-value" id="percentChange">—</div><div class="metric-foot">Reported by the data pipeline</div></article>
+    </section>
+    <section class="content-grid" id="history">
+      <article class="panel chart-panel"><div class="panel-heading"><div><h2>Price history</h2><p id="chartSubtitle">Recent stored prices for AAPL</p></div><span class="pill">LAST 30 RECORDS</span></div><div class="chart-wrap"><canvas id="priceChart" aria-label="Stock price history chart"></canvas><div id="chartEmpty" class="chart-empty">Search a symbol to load its price history.</div></div><div class="chart-legend"><span><i></i> Closing / stored price</span><span id="recordCount">0 records</span></div></article>
+      <article class="panel details-panel"><div class="panel-heading"><div><h2>Stock details</h2><p>Latest record from your API</p></div><span class="round-icon">⌁</span></div><div class="detail-row"><span>Symbol</span><b id="detailSymbol">—</b></div><div class="detail-row"><span>Price</span><b id="detailPrice">—</b></div><div class="detail-row"><span>Absolute change</span><b id="detailChange">—</b></div><div class="detail-row"><span>Percentage change</span><b id="detailPercent">—</b></div><div class="detail-row"><span>Timestamp</span><b id="detailTimestamp">—</b></div><a class="export-link" id="exportOne" href="#">⇩ Export this stock as CSV</a></article>
+    </section>
+    <section class="panel movers-panel" id="movers"><div class="panel-heading"><div><h2>Market movers</h2><p>Ranked from records currently stored in the database.</p></div><a id="exportAll" class="button secondary small" href="#">⇩ Export all CSV</a></div><div class="movers-grid"><div><div class="table-title"><span class="up-badge">↗</span><div><b>Top gainers</b><small>Highest percentage change</small></div></div><div class="table-scroll"><table><thead><tr><th>Symbol</th><th>Price</th><th>Change %</th></tr></thead><tbody id="gainersBody"><tr><td colspan="3" class="table-empty">Loading…</td></tr></tbody></table></div></div><div><div class="table-title"><span class="down-badge">↘</span><div><b>Top losers</b><small>Lowest percentage change</small></div></div><div class="table-scroll"><table><thead><tr><th>Symbol</th><th>Price</th><th>Change %</th></tr></thead><tbody id="losersBody"><tr><td colspan="3" class="table-empty">Loading…</td></tr></tbody></table></div></div></div></section>
+    <footer>StockPulse <span>•</span> Visualisation for Stock Market Data Pipeline &amp; Analytics API <span class="footer-right">Data is served by your backend API</span></footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
